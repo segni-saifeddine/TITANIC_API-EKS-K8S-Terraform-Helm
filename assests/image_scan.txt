@@ -1,0 +1,356 @@
+2022-04-16T16:51:24.378+0100	[34mINFO[0m	Detected OS: debian
+2022-04-16T16:51:24.378+0100	[34mINFO[0m	Detecting Debian vulnerabilities...
+2022-04-16T16:51:24.419+0100	[34mINFO[0m	Number of language-specific files: 1
+2022-04-16T16:51:24.419+0100	[34mINFO[0m	Detecting python-pkg vulnerabilities...
+
+saifhub/app_project:v0.0.1 (debian 11.3)
+========================================
+Total: 79 (UNKNOWN: 0, LOW: 66, MEDIUM: 2, HIGH: 11, CRITICAL: 0)
+
++------------------+------------------+----------+-------------------+---------------+-----------------------------------------+
+|     LIBRARY      | VULNERABILITY ID | SEVERITY | INSTALLED VERSION | FIXED VERSION |                  TITLE                  |
++------------------+------------------+----------+-------------------+---------------+-----------------------------------------+
+| apt              | CVE-2011-3374    | LOW      | 2.2.4             |               | It was found that apt-key in apt,       |
+|                  |                  |          |                   |               | all versions, do not correctly...       |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2011-3374    |
++------------------+------------------+          +-------------------+---------------+-----------------------------------------+
+| bsdutils         | CVE-2022-0563    |          | 2.36.1-8+deb11u1  |               | util-linux: partial disclosure          |
+|                  |                  |          |                   |               | of arbitrary files in chfn              |
+|                  |                  |          |                   |               | and chsh when compiled...               |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2022-0563    |
++------------------+------------------+          +-------------------+---------------+-----------------------------------------+
+| coreutils        | CVE-2016-2781    |          | 8.32-4            |               | coreutils: Non-privileged               |
+|                  |                  |          |                   |               | session can escape to the               |
+|                  |                  |          |                   |               | parent session in chroot                |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2016-2781    |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2017-18018   |          |                   |               | coreutils: race condition               |
+|                  |                  |          |                   |               | vulnerability in chown and chgrp        |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2017-18018   |
++------------------+------------------+----------+-------------------+---------------+-----------------------------------------+
+| e2fsprogs        | CVE-2022-1304    | HIGH     | 1.46.2-2          |               | e2fsprogs: out-of-bounds                |
+|                  |                  |          |                   |               | read/write via crafted filesystem       |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2022-1304    |
++------------------+------------------+          +-------------------+---------------+-----------------------------------------+
+| gzip             | CVE-2022-1271    |          | 1.10-4            |               | gzip: arbitrary-file-write              |
+|                  |                  |          |                   |               | vulnerability                           |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2022-1271    |
++------------------+------------------+----------+-------------------+---------------+-----------------------------------------+
+| libapt-pkg6.0    | CVE-2011-3374    | LOW      | 2.2.4             |               | It was found that apt-key in apt,       |
+|                  |                  |          |                   |               | all versions, do not correctly...       |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2011-3374    |
++------------------+------------------+          +-------------------+---------------+-----------------------------------------+
+| libblkid1        | CVE-2022-0563    |          | 2.36.1-8+deb11u1  |               | util-linux: partial disclosure          |
+|                  |                  |          |                   |               | of arbitrary files in chfn              |
+|                  |                  |          |                   |               | and chsh when compiled...               |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2022-0563    |
++------------------+------------------+----------+-------------------+---------------+-----------------------------------------+
+| libc-bin         | CVE-2021-3999    | HIGH     | 2.31-13+deb11u3   |               | glibc: Off-by-one buffer                |
+|                  |                  |          |                   |               | overflow/underflow in getcwd()          |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-3999    |
++                  +------------------+----------+                   +---------------+-----------------------------------------+
+|                  | CVE-2010-4756    | LOW      |                   |               | glibc: glob implementation              |
+|                  |                  |          |                   |               | can cause excessive CPU and             |
+|                  |                  |          |                   |               | memory consumption due to...            |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2010-4756    |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2018-20796   |          |                   |               | glibc: uncontrolled recursion in        |
+|                  |                  |          |                   |               | function check_dst_limits_calc_pos_1    |
+|                  |                  |          |                   |               | in posix/regexec.c                      |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2018-20796   |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2019-1010022 |          |                   |               | glibc: stack guard protection bypass    |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2019-1010022 |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2019-1010023 |          |                   |               | glibc: running ldd on malicious ELF     |
+|                  |                  |          |                   |               | leads to code execution because of...   |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2019-1010023 |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2019-1010024 |          |                   |               | glibc: ASLR bypass using                |
+|                  |                  |          |                   |               | cache of thread stack and heap          |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2019-1010024 |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2019-1010025 |          |                   |               | glibc: information disclosure of heap   |
+|                  |                  |          |                   |               | addresses of pthread_created thread     |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2019-1010025 |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2019-9192    |          |                   |               | glibc: uncontrolled recursion in        |
+|                  |                  |          |                   |               | function check_dst_limits_calc_pos_1    |
+|                  |                  |          |                   |               | in posix/regexec.c                      |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2019-9192    |
++------------------+------------------+----------+                   +---------------+-----------------------------------------+
+| libc6            | CVE-2021-3999    | HIGH     |                   |               | glibc: Off-by-one buffer                |
+|                  |                  |          |                   |               | overflow/underflow in getcwd()          |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-3999    |
++                  +------------------+----------+                   +---------------+-----------------------------------------+
+|                  | CVE-2010-4756    | LOW      |                   |               | glibc: glob implementation              |
+|                  |                  |          |                   |               | can cause excessive CPU and             |
+|                  |                  |          |                   |               | memory consumption due to...            |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2010-4756    |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2018-20796   |          |                   |               | glibc: uncontrolled recursion in        |
+|                  |                  |          |                   |               | function check_dst_limits_calc_pos_1    |
+|                  |                  |          |                   |               | in posix/regexec.c                      |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2018-20796   |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2019-1010022 |          |                   |               | glibc: stack guard protection bypass    |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2019-1010022 |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2019-1010023 |          |                   |               | glibc: running ldd on malicious ELF     |
+|                  |                  |          |                   |               | leads to code execution because of...   |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2019-1010023 |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2019-1010024 |          |                   |               | glibc: ASLR bypass using                |
+|                  |                  |          |                   |               | cache of thread stack and heap          |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2019-1010024 |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2019-1010025 |          |                   |               | glibc: information disclosure of heap   |
+|                  |                  |          |                   |               | addresses of pthread_created thread     |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2019-1010025 |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2019-9192    |          |                   |               | glibc: uncontrolled recursion in        |
+|                  |                  |          |                   |               | function check_dst_limits_calc_pos_1    |
+|                  |                  |          |                   |               | in posix/regexec.c                      |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2019-9192    |
++------------------+------------------+----------+-------------------+---------------+-----------------------------------------+
+| libcom-err2      | CVE-2022-1304    | HIGH     | 1.46.2-2          |               | e2fsprogs: out-of-bounds                |
+|                  |                  |          |                   |               | read/write via crafted filesystem       |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2022-1304    |
++------------------+------------------+----------+-------------------+---------------+-----------------------------------------+
+| libexpat1        | CVE-2013-0340    | LOW      | 2.2.10-2+deb11u3  |               | expat: internal entity expansion        |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2013-0340    |
++------------------+------------------+----------+-------------------+---------------+-----------------------------------------+
+| libext2fs2       | CVE-2022-1304    | HIGH     | 1.46.2-2          |               | e2fsprogs: out-of-bounds                |
+|                  |                  |          |                   |               | read/write via crafted filesystem       |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2022-1304    |
++------------------+------------------+          +-------------------+---------------+-----------------------------------------+
+| libgcrypt20      | CVE-2021-33560   |          | 1.8.7-6           |               | libgcrypt: mishandles ElGamal           |
+|                  |                  |          |                   |               | encryption because it lacks             |
+|                  |                  |          |                   |               | exponent blinding to address a...       |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-33560   |
++                  +------------------+----------+                   +---------------+-----------------------------------------+
+|                  | CVE-2018-6829    | LOW      |                   |               | libgcrypt: ElGamal implementation       |
+|                  |                  |          |                   |               | doesn't have semantic security due      |
+|                  |                  |          |                   |               | to incorrectly encoded plaintexts...    |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2018-6829    |
++------------------+------------------+----------+-------------------+---------------+-----------------------------------------+
+| libgnutls30      | CVE-2021-4209    | MEDIUM   | 3.7.1-5           |               | GnuTLS: Null pointer                    |
+|                  |                  |          |                   |               | dereference in MD_UPDATE                |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-4209    |
++                  +------------------+----------+                   +---------------+-----------------------------------------+
+|                  | CVE-2011-3389    | LOW      |                   |               | HTTPS: block-wise chosen-plaintext      |
+|                  |                  |          |                   |               | attack against SSL/TLS (BEAST)          |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2011-3389    |
++------------------+------------------+          +-------------------+---------------+-----------------------------------------+
+| libgssapi-krb5-2 | CVE-2004-0971    |          | 1.18.3-6+deb11u1  |               | security flaw                           |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2004-0971    |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2018-5709    |          |                   |               | krb5: integer overflow                  |
+|                  |                  |          |                   |               | in dbentry->n_key_data                  |
+|                  |                  |          |                   |               | in kadmin/dbutil/dump.c                 |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2018-5709    |
++------------------+------------------+          +                   +---------------+-----------------------------------------+
+| libk5crypto3     | CVE-2004-0971    |          |                   |               | security flaw                           |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2004-0971    |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2018-5709    |          |                   |               | krb5: integer overflow                  |
+|                  |                  |          |                   |               | in dbentry->n_key_data                  |
+|                  |                  |          |                   |               | in kadmin/dbutil/dump.c                 |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2018-5709    |
++------------------+------------------+          +                   +---------------+-----------------------------------------+
+| libkrb5-3        | CVE-2004-0971    |          |                   |               | security flaw                           |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2004-0971    |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2018-5709    |          |                   |               | krb5: integer overflow                  |
+|                  |                  |          |                   |               | in dbentry->n_key_data                  |
+|                  |                  |          |                   |               | in kadmin/dbutil/dump.c                 |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2018-5709    |
++------------------+------------------+          +                   +---------------+-----------------------------------------+
+| libkrb5support0  | CVE-2004-0971    |          |                   |               | security flaw                           |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2004-0971    |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2018-5709    |          |                   |               | krb5: integer overflow                  |
+|                  |                  |          |                   |               | in dbentry->n_key_data                  |
+|                  |                  |          |                   |               | in kadmin/dbutil/dump.c                 |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2018-5709    |
++------------------+------------------+----------+-------------------+---------------+-----------------------------------------+
+| liblzma5         | CVE-2022-1271    | HIGH     | 5.2.5-2           |               | gzip: arbitrary-file-write              |
+|                  |                  |          |                   |               | vulnerability                           |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2022-1271    |
++------------------+------------------+----------+-------------------+---------------+-----------------------------------------+
+| libmount1        | CVE-2022-0563    | LOW      | 2.36.1-8+deb11u1  |               | util-linux: partial disclosure          |
+|                  |                  |          |                   |               | of arbitrary files in chfn              |
+|                  |                  |          |                   |               | and chsh when compiled...               |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2022-0563    |
++------------------+------------------+          +-------------------+---------------+-----------------------------------------+
+| libncursesw6     | CVE-2021-39537   |          | 6.2+20201114-2    |               | ncurses: heap-based buffer overflow     |
+|                  |                  |          |                   |               | in _nc_captoinfo() in captoinfo.c       |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-39537   |
++------------------+------------------+          +-------------------+---------------+-----------------------------------------+
+| libpcre3         | CVE-2017-11164   |          | 2:8.39-13         |               | pcre: OP_KETRMAX feature in the         |
+|                  |                  |          |                   |               | match function in pcre_exec.c           |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2017-11164   |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2017-16231   |          |                   |               | pcre: self-recursive call               |
+|                  |                  |          |                   |               | in match() in pcre_exec.c               |
+|                  |                  |          |                   |               | leads to denial of service...           |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2017-16231   |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2017-7245    |          |                   |               | pcre: stack-based buffer overflow       |
+|                  |                  |          |                   |               | write in pcre32_copy_substring          |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2017-7245    |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2017-7246    |          |                   |               | pcre: stack-based buffer overflow       |
+|                  |                  |          |                   |               | write in pcre32_copy_substring          |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2017-7246    |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2019-20838   |          |                   |               | pcre: Buffer over-read in JIT           |
+|                  |                  |          |                   |               | when UTF is disabled and \X or...       |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2019-20838   |
++------------------+------------------+          +-------------------+---------------+-----------------------------------------+
+| libsepol1        | CVE-2021-36084   |          | 3.1-1             |               | libsepol: use-after-free in             |
+|                  |                  |          |                   |               | __cil_verify_classperms()               |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-36084   |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2021-36085   |          |                   |               | libsepol: use-after-free in             |
+|                  |                  |          |                   |               | __cil_verify_classperms()               |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-36085   |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2021-36086   |          |                   |               | libsepol: use-after-free in             |
+|                  |                  |          |                   |               | cil_reset_classpermission()             |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-36086   |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2021-36087   |          |                   |               | libsepol: heap-based buffer             |
+|                  |                  |          |                   |               | overflow in ebitmap_match_any()         |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-36087   |
++------------------+------------------+          +-------------------+---------------+-----------------------------------------+
+| libsmartcols1    | CVE-2022-0563    |          | 2.36.1-8+deb11u1  |               | util-linux: partial disclosure          |
+|                  |                  |          |                   |               | of arbitrary files in chfn              |
+|                  |                  |          |                   |               | and chsh when compiled...               |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2022-0563    |
++------------------+------------------+----------+-------------------+---------------+-----------------------------------------+
+| libsqlite3-0     | CVE-2021-45346   | MEDIUM   | 3.34.1-3          |               | sqlite: crafted SQL query               |
+|                  |                  |          |                   |               | allows a malicious user to              |
+|                  |                  |          |                   |               | obtain sensitive information...         |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-45346   |
++                  +------------------+----------+                   +---------------+-----------------------------------------+
+|                  | CVE-2021-36690   | LOW      |                   |               | ** DISPUTED ** A segmentation fault     |
+|                  |                  |          |                   |               | can occur in the sqlite3.exe comma...   |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-36690   |
++------------------+------------------+----------+-------------------+---------------+-----------------------------------------+
+| libss2           | CVE-2022-1304    | HIGH     | 1.46.2-2          |               | e2fsprogs: out-of-bounds                |
+|                  |                  |          |                   |               | read/write via crafted filesystem       |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2022-1304    |
++------------------+------------------+----------+-------------------+---------------+-----------------------------------------+
+| libssl1.1        | CVE-2007-6755    | LOW      | 1.1.1n-0+deb11u1  |               | Dual_EC_DRBG: weak pseudo               |
+|                  |                  |          |                   |               | random number generator                 |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2007-6755    |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2010-0928    |          |                   |               | openssl: RSA authentication weakness    |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2010-0928    |
++------------------+------------------+          +-------------------+---------------+-----------------------------------------+
+| libsystemd0      | CVE-2013-4392    |          | 247.3-7           |               | systemd: TOCTOU race condition          |
+|                  |                  |          |                   |               | when updating file permissions          |
+|                  |                  |          |                   |               | and SELinux security contexts...        |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2013-4392    |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2020-13529   |          |                   |               | systemd: DHCP FORCERENEW                |
+|                  |                  |          |                   |               | authentication not implemented          |
+|                  |                  |          |                   |               | can cause a system running the...       |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2020-13529   |
++------------------+------------------+          +-------------------+---------------+-----------------------------------------+
+| libtinfo6        | CVE-2021-39537   |          | 6.2+20201114-2    |               | ncurses: heap-based buffer overflow     |
+|                  |                  |          |                   |               | in _nc_captoinfo() in captoinfo.c       |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-39537   |
++------------------+------------------+          +-------------------+---------------+-----------------------------------------+
+| libudev1         | CVE-2013-4392    |          | 247.3-7           |               | systemd: TOCTOU race condition          |
+|                  |                  |          |                   |               | when updating file permissions          |
+|                  |                  |          |                   |               | and SELinux security contexts...        |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2013-4392    |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2020-13529   |          |                   |               | systemd: DHCP FORCERENEW                |
+|                  |                  |          |                   |               | authentication not implemented          |
+|                  |                  |          |                   |               | can cause a system running the...       |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2020-13529   |
++------------------+------------------+          +-------------------+---------------+-----------------------------------------+
+| libuuid1         | CVE-2022-0563    |          | 2.36.1-8+deb11u1  |               | util-linux: partial disclosure          |
+|                  |                  |          |                   |               | of arbitrary files in chfn              |
+|                  |                  |          |                   |               | and chsh when compiled...               |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2022-0563    |
++------------------+------------------+          +-------------------+---------------+-----------------------------------------+
+| login            | CVE-2007-5686    |          | 1:4.8.1-1         |               | initscripts in rPath Linux              |
+|                  |                  |          |                   |               | 1 sets insecure permissions             |
+|                  |                  |          |                   |               | for the /var/lo ......                  |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2007-5686    |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2013-4235    |          |                   |               | shadow-utils: TOCTOU race               |
+|                  |                  |          |                   |               | conditions by copying and               |
+|                  |                  |          |                   |               | removing directory trees                |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2013-4235    |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2019-19882   |          |                   |               | shadow-utils: local users can           |
+|                  |                  |          |                   |               | obtain root access because setuid       |
+|                  |                  |          |                   |               | programs are misconfigured...           |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2019-19882   |
++------------------+------------------+----------+-------------------+---------------+-----------------------------------------+
+| logsave          | CVE-2022-1304    | HIGH     | 1.46.2-2          |               | e2fsprogs: out-of-bounds                |
+|                  |                  |          |                   |               | read/write via crafted filesystem       |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2022-1304    |
++------------------+------------------+----------+-------------------+---------------+-----------------------------------------+
+| mount            | CVE-2022-0563    | LOW      | 2.36.1-8+deb11u1  |               | util-linux: partial disclosure          |
+|                  |                  |          |                   |               | of arbitrary files in chfn              |
+|                  |                  |          |                   |               | and chsh when compiled...               |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2022-0563    |
++------------------+------------------+          +-------------------+---------------+-----------------------------------------+
+| ncurses-base     | CVE-2021-39537   |          | 6.2+20201114-2    |               | ncurses: heap-based buffer overflow     |
+|                  |                  |          |                   |               | in _nc_captoinfo() in captoinfo.c       |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2021-39537   |
++------------------+                  +          +                   +---------------+                                         +
+| ncurses-bin      |                  |          |                   |               |                                         |
+|                  |                  |          |                   |               |                                         |
+|                  |                  |          |                   |               |                                         |
++------------------+------------------+          +-------------------+---------------+-----------------------------------------+
+| openssl          | CVE-2007-6755    |          | 1.1.1n-0+deb11u1  |               | Dual_EC_DRBG: weak pseudo               |
+|                  |                  |          |                   |               | random number generator                 |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2007-6755    |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2010-0928    |          |                   |               | openssl: RSA authentication weakness    |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2010-0928    |
++------------------+------------------+          +-------------------+---------------+-----------------------------------------+
+| passwd           | CVE-2007-5686    |          | 1:4.8.1-1         |               | initscripts in rPath Linux              |
+|                  |                  |          |                   |               | 1 sets insecure permissions             |
+|                  |                  |          |                   |               | for the /var/lo ......                  |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2007-5686    |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2013-4235    |          |                   |               | shadow-utils: TOCTOU race               |
+|                  |                  |          |                   |               | conditions by copying and               |
+|                  |                  |          |                   |               | removing directory trees                |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2013-4235    |
++                  +------------------+          +                   +---------------+-----------------------------------------+
+|                  | CVE-2019-19882   |          |                   |               | shadow-utils: local users can           |
+|                  |                  |          |                   |               | obtain root access because setuid       |
+|                  |                  |          |                   |               | programs are misconfigured...           |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2019-19882   |
++------------------+------------------+----------+-------------------+---------------+-----------------------------------------+
+| perl-base        | CVE-2020-16156   | HIGH     | 5.32.1-4+deb11u2  |               | perl-CPAN: Bypass of verification       |
+|                  |                  |          |                   |               | of signatures in CHECKSUMS files        |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2020-16156   |
++                  +------------------+----------+                   +---------------+-----------------------------------------+
+|                  | CVE-2011-4116    | LOW      |                   |               | perl: File::Temp insecure               |
+|                  |                  |          |                   |               | temporary file handling                 |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2011-4116    |
++------------------+------------------+          +-------------------+---------------+-----------------------------------------+
+| tar              | CVE-2005-2541    |          | 1.34+dfsg-1       |               | tar: does not properly warn the user    |
+|                  |                  |          |                   |               | when extracting setuid or setgid...     |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2005-2541    |
++------------------+------------------+          +-------------------+---------------+-----------------------------------------+
+| util-linux       | CVE-2022-0563    |          | 2.36.1-8+deb11u1  |               | util-linux: partial disclosure          |
+|                  |                  |          |                   |               | of arbitrary files in chfn              |
+|                  |                  |          |                   |               | and chsh when compiled...               |
+|                  |                  |          |                   |               | -->avd.aquasec.com/nvd/cve-2022-0563    |
++------------------+------------------+----------+-------------------+---------------+-----------------------------------------+
+
+Python (python-pkg)
+===================
+Total: 0 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
+

@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  app:
+    container_name: titanicapp
+    image: flaskapp
+    build: ./src
+    command: flask run -h 0.0.0.0
+    ports:
+      - "8080:8080"
+    env_file:
+     - ./app.env
+    depends_on:
+      - db
+
+  db:
+    container_name: titanicdb
+    image: docker.io/bitnami/postgresql:11
+    ports:
+      - "5432"
+    env_file:
+     - ./db.env
+      
+volumes:
+ data:
+  driver: local
+    

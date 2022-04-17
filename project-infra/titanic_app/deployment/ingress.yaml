@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: server
+  namespace: app
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internal-facing
+    kubernetes.io/ingress.class: alb
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /
+            backend:
+              serviceName: server
+              servicePort: 80

@@ -376,11 +376,11 @@ the service IP is : a40ced4d16f2847d4ae29096639dd83f-577852132.us-east-1.elb.ama
  ![DELETE](assests/delete_request.png)
 
  - PUT : update the name of people with id=30 from  "Master. Juha Niilo Panula" to  "Master. Juha Niilo Panula-updated"
- ![PUT](assests/PUT_request1.png)
- ![PUT](assests/PUT_REQUEST2.png)
+ ![PUT](assests/PUT_request2.png)
+ ![PUT](assests/PUT_REQUEST3.png)
 
  - POST: add a "new people" to the titainc_db :
- ![POST](assests/post_request.png)
+ ![POST](assests/post_request1.png)
  
 ## More steps to build a proper Cloud Native system
 

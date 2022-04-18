@@ -8,12 +8,24 @@
 - `PostgreSQL` is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.
 
 - `Docker Compose`: Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application's services.
+- `Terraform`: Terraform is an open-source infrastructure as code software tool that provides a consistent CLI workflow to manage hundreds of cloud services.
+
+- `Kubernetes`: Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
+
+- `Helm`: Helm helps you manage Kubernetes applications — Helm Charts help you define, install, and upgrade even the most complex Kubernetes application.
+
+- `AWS Cloud`: Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services. 
 
 ## Assumption And Prerequisites
 
-- You have a Docker environment running.
+- You have a `Docker` environment running.
 - You have an account in a container registry.
-- You have Python installed on your machine for testing
+- You have `Python` installed on your machine for testing
+- You have `kubectl` installed in your machine.
+- You have `helm` installed in your machine.
+- You have `terraform` installed in your machine.
+- You have `AWS CLi` installed and configured.
+- You have a `AWS account`, with a project.
 
 
 # Endpoints
@@ -91,7 +103,8 @@ sudo docker-compose up -d --build
     $ docker images ls
     $ docker ps -a
 ```
-![Docker_container](assests/docker ps-a.png)
+![Docker_container](assests/docker-ps-a.png)
+
 - Recreate the database and copy the dataset :
 
 ```bash
@@ -137,24 +150,6 @@ The source code already contains the Dockerfile needed for the app :
 
 > In this section ,we will prepare the infrastructure of the application and deploy it to EKS cluster by using Terraform and Helm :
 
-### Tools and platforms 
-
-- `Terraform`: Terraform is an open-source infrastructure as code software tool that provides a consistent CLI workflow to manage hundreds of cloud services.
-
-- `Kubernetes`: Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
-
-- `Helm`: Helm helps you manage Kubernetes applications — Helm Charts help you define, install, and upgrade even the most complex Kubernetes application.
-
-- `AWS Cloud`: Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services. 
-
-### Assumption And Prerequisites
-
-- You have `kubectl` installed in your machine.
-- You have `helm` installed in your machine.
-- You have `terraform` installed in your machine.
-- You have `AWS CLi` installed and configured.
-- You have a AWS account, with a project.
-
 * Verify that the Terraform tool has been installed correctly with:
 ```bash
     $ terrafrom version
@@ -178,7 +173,7 @@ Verify the AWS cli has benn installed correctly with :
 
 The code is on the eks_cluster folder in the following structure:
 
-![tree](assets/eks-tree.png)
+![tree](assests/eks-tree.png)
 
 - Initialize tge Terraform code
 
@@ -209,7 +204,7 @@ Repeat the same steps for the production cluster, replace `dev.tfvars` by `prod.
 
 - Check the EKS cluster on AWS console :
 
-![aws_console](assets/aws-console.png)
+![aws_console](assests/aws-console.png)
 
 - Use Kubectl to manage the cluster :
 
@@ -240,7 +235,7 @@ In this setup we are going to use Terraform, Helm and the Terraform Helm Provide
 
 The code is on the `DB` folder in the following structure:
 
-![structure](assets/Db-tree.png)
+![structure](assests/Db-tree.png)
 
 
 #### 2- Deployment
@@ -272,7 +267,7 @@ terraform plan --var-file=dev.tfvars --out=postgresql_dev_plan_outputs.json
 
 Terraform will ask you to add the secret variables such as the PostgreSQL credentials. 
 
-![plan](assets/DB-tf-plan.png)
+![plan](assests/DB-tf-plan.png)
 
 ```bash
 terraform apply "postgresql_dev_plan_outputs.json"
@@ -286,7 +281,7 @@ terraform apply "postgresql_dev_plan_outputs.json"
 ```bash
 ➜ kubectl get all -n db
 ```
-![db-namespace](assets/kubectl-get-ns-db.png)
+![db-namespace](assests/kubectl-get-ns-db.png)
 
 > the PostgreSQL resources are provisioning in a siparte namespace called "db"
 
@@ -328,7 +323,7 @@ terraform plan --var-file=dev.tfvars --out=app_dev_plan_outputs.json
 ```
 Terraform will ask you to add the secret variables such as the PostgreSQL credentials. See the following screenshot and terminal log:
 
-![plan](assets/app-tf-plan.png)
+![plan](assests/app-tf-plan.png)
 
 ```bash
 terraform apply "app_dev_plan_outputs.json"
@@ -346,7 +341,7 @@ kubectl get all -n app
 
 - check all ressources deployed:
 
-![get-all-ns](assets/kubectl-get-all-ns.png)
+![get-all-ns](assests/kubectl-get-all-ns.png)
 
 > Run the same steps to initalize and copy the dataset by using the "kubectl exec command"
 
@@ -368,7 +363,7 @@ To test the application functionality we need first to grab the cluster HTTP Loa
 ```bash
 kubectl get svc -n app
 ```
-![SVC-ip](assets/svc-ip.PNG)
+![SVC-ip](assests/svc-ip.PNG)
 the service IP is : a40ced4d16f2847d4ae29096639dd83f-577852132.us-east-1.elb.amazonaws.com
  
  - Get people :

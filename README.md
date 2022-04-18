@@ -15,6 +15,7 @@
 - `Helm`: Helm helps you manage Kubernetes applications — Helm Charts help you define, install, and upgrade even the most complex Kubernetes application.
 
 - `AWS Cloud`: Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services. 
+- `Trivy`: is a simple and comprehensive Scanner for vulnerabilities in container images, file systems, and Git repositories, as well as for configuration issues 
 
 ## Assumption And Prerequisites
 
